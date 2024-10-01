@@ -8,6 +8,12 @@ on:
     branches: [ "master" ]
   pull_request:
     branches: [ "master" ]
+  workflow_dispatch:
+    inputs:
+      run_reason:
+        description: 'Reason for running this workflow' # Description for the input
+        required: false
+        default: 'Manually triggered'
 
 permissions:
   contents: read
